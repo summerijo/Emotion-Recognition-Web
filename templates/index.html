@@ -1,0 +1,70 @@
+{% extends "header.html" %}
+{% block content %}
+<div id="home" class="home-section vh-100">
+    <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8 text-start">
+            <h1>AI is changing the way we can recognize emotions in various applications.</h1>
+            <p>Emotion recognition technology uses AI to analyze facial expressions and identify emotions. Explore the features and try it out for yourself.</p>
+            <a href="#features"><button type="button" class="btn btn-dark">Get Started&nbsp;
+                <!-- <img src="static/images/icons8-arrow-24.png" width="21" height="21" class="d-inline-block align-top"> -->
+                <i class="fa fa-long-arrow-right"></i>
+              </button></a>
+          </div>
+          <div class="col-md-4">
+            <img src="static/images/World Emoji Day-cuate (3).png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id="features" class="features-section">
+    <div class="container">
+        <h2>Features</h2>
+        <p>Here are some key features of our website.</p>
+        <div class="row">
+            <div class="col-md-6">
+                  <div class="features">
+                    <div class="row align-items-center">
+                      <div class="col-md-5">
+                        <img src="static/images/Video upload-bro.png" alt="Image" class="img-fluid">
+                      </div>
+                      <div class="col-md-7 text-start">
+                        <h4 class="card-title">Upload Image</h4>
+                        <p class="card-text">Upload your image and let our feature detect the emotions within. Whether it's a smile, a frown, or anything in between, we'll decipher the feelings captured in your photo with precision and ease.</p>
+                        <a href="{{ url_for('upload') }}" style="text-decoration:none; color: inherit;"><button type="button" class="btn btn-outline-dark">Start Now &nbsp;
+                          <i class="fa fa-long-arrow-right"></i></a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+              <div class="features">
+                <div class="row align-items-center">
+                  <div class="col-md-5">
+                    <img src="static/images/Real-time Sync-bro.png" alt="Image" class="img-fluid">
+                  </div>
+                  <div class="col-md-7 text-start">
+                    <h4 class="card-title">Real-time Recognition</h4>
+                    <p class="card-text">Experience real-time emotion recognition through your device's camera. From joy to surprise, from sadness to delight, our technology identifies and reflects the different emotions playing across your face.</p>
+                    <a href="{{ url_for('realtime') }}" style="text-decoration:none; color: inherit;"><button type="button" class="btn btn-outline-dark">Start Now &nbsp;
+                      <i class="fa fa-long-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about" class="about-section" style="background-color: #f2f2f2; padding: 100px 0;">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Learn more about our company and what we do.</p>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emotionrecognition</title>
+    <link rel="icon" type="image/png" href="static/images/icons8-happy-64.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-light fixed-top" data-bs-theme="light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="static/images/icons8-happy-64.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            emotionrecognition
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" onclick="myFunction()" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Features</a>
+                    <div id="myDropdown" class="dropdown-menu">
+                      <a class="dropdown-item" href="{{ url_for('upload') }}">Upload Image</a>
+                      <a class="dropdown-item" href="{{ url_for('realtime') }}">Real-time Recognition</a>
+                    </div>
+                  </li>                                                
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">About</a>
+                </li>
+                <li class="nav-item">
+                <a type="button" class="btn btn-outline-dark" href="{{ url_for('home') }}">Get Started</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<div class="container real-time">
+    <div class="camera">
+        <h1>Real-Time Emotion Detection</h1>
+        <img src="{{ url_for('video_feed') }}" alt="Real-Time Emotion Detection" width="640" height="480">
+    </div>
+    <hr>
+    <div class="talk">
+        <h1>What does your emotion tell about?</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Happy</h3>
+                <p>Happiness is a positive emotional state characterized by feelings of joy, contentment, and satisfaction. It is often associated with fulfilling experiences, accomplishments, or positive social interactions. Happiness promotes well-being and resilience.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Disgust</h3>
+                <p>Disgust is an emotional response to offensive, distasteful, or repulsive stimuli. It serves as a protective mechanism to avoid potentially harmful substances or situations. Disgust can also be triggered by moral violations or unethical behavior.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Sad</h3>
+                <p>Sadness is a negative emotional state characterized by feelings of sorrow, grief, or melancholy. It can arise from loss, disappointment, or unmet expectations. Sadness allows individuals to process and cope with difficult situations, leading to emotional healing and growth.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Fear</h3>
+                <p>Fear is an emotional response to perceived danger or threat. It triggers physiological changes, such as increased heart rate and adrenaline production, preparing the individual to respond to the threat either by confronting it or fleeing from it.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Angry</h3>
+                <p>Anger typically arises in response to perceived threats or injustices. It can manifest as feelings of irritation, frustration, or rage. Anger motivates individuals to take action to address the perceived problem or injustice.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Surprise</h3>
+                <p>Surprise is an abrupt emotional reaction to unexpected events or stimuli. It can range from mild astonishment to intense shock. Surprise alerts individuals to changes in their environment, prompting them to reassess their expectations and adapt their behavior accordingly.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Neutral</h3>
+                <p>Neutral or indifference refers to a lack of strong emotional response. It may indicate a state of calmness, disinterest, or emotional detachment. While neutrality can be a temporary state, it can also signify emotional stability and balance.</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
